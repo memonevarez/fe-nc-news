@@ -42,10 +42,12 @@ body {
   justify-content: center;
 }
 
-.card-author,
 .card-title {
-  margin: 0;
+  margin: 5px;
   font-weight: bold;
+}
+.card-author {
+  text-align: right;
 }
 
 .card-footer {
@@ -54,4 +56,8 @@ body {
   font-size: 0.9em;
   color: grey;
   margin-top: 10px;
+}
+.item-link {
+  color: inherit;
+  text-decoration: none;
 }

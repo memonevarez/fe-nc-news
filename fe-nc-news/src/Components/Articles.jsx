@@ -22,7 +22,6 @@ export const Articles = () => {
         setLoading(false);
       });
   }, []);
-  //console.log(articles, "<<<<ggrrr");
   return (
     <>
       <h2>Articles Feed wow</h2>
