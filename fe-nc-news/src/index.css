@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid crimson;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 350px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two columns: image, info */
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: start;
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-author,
+.card-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: grey;
+  margin-top: 10px;
+}
