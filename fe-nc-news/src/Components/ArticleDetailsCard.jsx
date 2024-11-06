@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-export const ArticleDetailsCard = ({ articleDetails }) => {
+import { Comments } from "./Comments";
+export const ArticleDetailsCard = ({ articleDetails, comments }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -13,7 +14,10 @@ export const ArticleDetailsCard = ({ articleDetails }) => {
         </div>
       </div>
       <div className="card-footer">
-        <p>Comments: {articleDetails.comment_count} </p>
+        <Comments
+          comments={comments}
+          comment_count={articleDetails.comment_count}
+        />
         <p>Votes: {articleDetails.votes}</p>
         <p>{articleDetails.topic}</p>
       </div>
