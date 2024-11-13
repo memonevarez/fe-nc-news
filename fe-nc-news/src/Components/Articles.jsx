@@ -8,6 +8,20 @@ export const Articles = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  const topics = [
+    "Cooking",
+    "Coding",
+    "Football",
+    "Music",
+    "World",
+    "Economy",
+    "Technology",
+    "Films",
+    "Travel",
+    "Restaurants",
+    "Health",
+  ];
+
   useEffect(() => {
     setLoading(true);
     apiClient
@@ -25,9 +39,18 @@ export const Articles = () => {
   return (
     <>
       <h2>Articles Feed wow</h2>
-      {articles.map((article) => {
-        return <ArticleCard article={article} key={article.article_id} />;
-      })}
+      <div className="topics-scroll-container">
+        {topics.map((topic, index) => (
+          <span key={index} className="topic-item">
+            {topic}
+          </span>
+        ))}
+      </div>
+      <div className="article-card-container">
+        {articles.map((article) => {
+          return <ArticleCard article={article} key={article.article_id} />;
+        })}
+      </div>
     </>
   );
 };

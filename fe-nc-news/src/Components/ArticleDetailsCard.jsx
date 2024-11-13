@@ -2,7 +2,7 @@ import { Comments } from "./Comments";
 import { Votes } from "./Votes";
 
 export const ArticleDetailsCard = ({ articleDetails }) => {
-  //console.log(articleDetails.article_id, "<<<<ggggg");  why is it printed 10 times always??
+  //console.log(articleDetails.article_id, "<<<<ggggg");
   return (
     <div className="card">
       <div className="card-content">

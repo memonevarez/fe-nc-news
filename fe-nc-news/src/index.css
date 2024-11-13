@@ -1,4 +1,23 @@
+/* Main container for A4-style width */
+.page-container {
+  max-width: 793px; /* A4 width in pixels */
+  min-width: 400px; /* Ensures minimum size for readability */
+  width: 100%;
+  margin: 0 auto; /* Center on the page */
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 793px) {
+  .page-container {
+    width: 100%;
+    max-width: 100%; /* Allows full width on mobile */
+    padding: 0px;
+  }
+}
+
 body {
+  overflow-x: hidden; /*Prevents page-wide horizontal scrolling*/
   display: flex;
   justify-content: center;
   margin: 0;
@@ -10,8 +29,8 @@ body {
   border: 2px solid crimson;
   padding: 10px;
   border-radius: 10px;
-  max-width: 350px;
-  margin: 10px;
+  max-width: 100%;
+  margin: 5px 0px;
   justify-content: center;
 }
 
@@ -30,8 +49,8 @@ body {
 }
 
 .card-image {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -229,6 +248,8 @@ body {
 
 /*Header styling*/
 .header {
+  width: 100%;
+  box-sizing: border-box; /* Prevents overflow from padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -244,12 +265,21 @@ body {
   font-size: 2rem;
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column; /* Stack avatar on top of button */
+  align-items: center;
+}
+
 .change-user-button {
   background-color: transparent;
+  color: #fff;
   border: none;
-  color: black;
+  padding: 8px 12px;
   cursor: pointer;
+  border-radius: 4px;
   font-size: 0.9rem;
+  margin-top: 8px;
 }
 .change-user-button:hover {
   text-decoration: underline;
@@ -261,4 +291,34 @@ body {
   color: red;
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+.article-card-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.topics-scroll-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  max-width: 100%;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 16px;
+}
+
+.topic-item {
+  background-color: #e3e3e3;
+  padding: 8px 12px;
+  border-radius: 20px;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.topics-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.topics-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
 }

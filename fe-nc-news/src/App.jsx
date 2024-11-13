@@ -11,10 +11,12 @@ function App() {
     console.log("User selected:", user);
   };
   return (
-    <UserProvider>
-      <Header />
-      <RoutesContainer />
-    </UserProvider>
+    <div className="page-container">
+      <UserProvider>
+        <Header />
+        <RoutesContainer />
+      </UserProvider>
+    </div>
   );
 }
 
