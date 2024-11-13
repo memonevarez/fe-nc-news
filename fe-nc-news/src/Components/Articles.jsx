@@ -38,7 +38,23 @@ export const Articles = () => {
   }, []);
   return (
     <>
-      <h2>Articles Feed wow</h2>
+      <p>Current features:</p>
+      <ul>
+        <li>News feed</li>
+        <li>Article details/body</li>
+        <li>
+          Add comments with option for users to delete their own comments only
+        </li>
+        <li>Upvote/Downvote functionality</li>
+        <li>Netflix-Style user login</li>
+      </ul>
+      <p>Upcoming features:</p>
+      <ul>
+        <li>Filtering by topic</li>
+        <li>Sorting by date, comment count, and votes</li>
+        <li>Pagination</li>
+      </ul>
+
       <div className="topics-scroll-container">
         {topics.map((topic, index) => (
           <span key={index} className="topic-item">
