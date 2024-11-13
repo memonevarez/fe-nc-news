@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
       .get("/users")
       .then((response) => {
         setUsers(response.data.users);
-        setCurrentUser(response.data.users[0]);
+        setCurrentUser(response.data.users[1]);
       })
       .catch((err) => {
         console.log("Error getting users: ", err);
